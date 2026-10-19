@@ -199,7 +199,7 @@ pnpm run pack
 ```bash
 ./native/macos/build.sh
 ./native/macos/build-launcher.sh
-./native/macos/pack.sh 0.3.1
+./native/macos/pack.sh 0.3.2
 ```
 
 架构与数据不变量见 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)，参与开发请阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。版本变化见 [CHANGELOG.md](CHANGELOG.md)。

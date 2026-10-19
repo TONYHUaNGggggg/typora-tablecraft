@@ -119,7 +119,9 @@ function isEscaped(source: string, index: number) {
 }
 
 function isDelimiterRow(cells: string[]) {
-  return cells.length > 0 && cells.every(cell => /^:?-{3,}:?$/.test(cell.trim()))
+  // Typora accepts compact delimiter cells such as `:-:` and `-`, even
+  // though conventional GFM output normally uses at least three dashes.
+  return cells.length > 0 && cells.every(cell => /^:?-+:?$/.test(cell.trim()))
 }
 
 function isFence(line: string) {

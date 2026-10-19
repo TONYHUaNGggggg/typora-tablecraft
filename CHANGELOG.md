@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.2
+
+- Accept Typora's compact table delimiter cells such as `:-:` and `-`.
+- Prevent editor/Markdown table-index mismatches that could incorrectly report row insertion as out of range.
+
 ## 0.3.1
 
 - Rename the project to **Typora TableCraft** and the plugin display name to **TableCraft**.

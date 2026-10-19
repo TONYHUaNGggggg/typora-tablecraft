@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "typora-tablecraft",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Advanced editing for native Typora Markdown tables, including merged cells and structure-safe operations.",
   "packageManager": "pnpm@11.19.0",
   "type": "module",

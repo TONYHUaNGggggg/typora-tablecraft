@@ -41,6 +41,30 @@ test('finds tables but ignores fenced code blocks', () => {
   assert.deepEqual(tables[0].rows, [['real', 'table'], ['a', 'b']])
 })
 
+test('accepts compact delimiter cells emitted or accepted by Typora', () => {
+  const markdown = [
+    '| Algorithm | Params | Model |',
+    '| :---: | :-: | - |',
+    '| Baseline | 10 | Best |',
+    '| Variant | 12 | Better |',
+    '',
+    '| Later | Table |',
+    '| --- | --- |',
+    '| a | b |',
+  ].join('\n')
+
+  const tables = parseMarkdownTables(markdown)
+  assert.equal(tables.length, 2)
+  assert.deepEqual(tables[0].rows, [
+    ['Algorithm', 'Params', 'Model'],
+    ['Baseline', '10', 'Best'],
+    ['Variant', '12', 'Better'],
+  ])
+
+  const inserted = insertTableRowInMarkdown(markdown, 0, 3)
+  assert.equal(parseMarkdownTables(inserted)[0].rows.length, 4)
+})
+
 test('merges a rectangle and restores all covered content', () => {
   const markdown = [
     '| A | B | C |',

@@ -132,7 +132,7 @@ pnpm run pack
 ```bash
 ./native/macos/build.sh
 ./native/macos/build-launcher.sh
-./native/macos/pack.sh 0.3.1
+./native/macos/pack.sh 0.3.2
 ```
 
 See [Architecture](docs/ARCHITECTURE.md), [Contributing](CONTRIBUTING.md), and the [Changelog](CHANGELOG.md).
